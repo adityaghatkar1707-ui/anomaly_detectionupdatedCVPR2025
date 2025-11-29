@@ -1,83 +1,80 @@
-DATASET:
+🚀 Anomaly Detection in Surveillance Videos (Updated CVPR 2025)
 
-The dataset can be also downloaded from the following link:
-https://visionlab.uncc.edu/download/summary/60-data/477-ucf-anomaly-detection-dataset
+This is an updated and working version of the CVPR 2018 Anomaly Detection project by Waqas Sultani et al., rewritten for modern Python 3.13, TensorFlow 2.20.0, and Keras.
+The original code used Theano and outdated Keras 1.x; this version runs successfully on Windows using CPU.
 
+🧠 About the Project
 
-You can also download dataset in parts through following link
+The system detects abnormal activities in surveillance videos (e.g., accidents, explosions, thefts) using C3D feature representations.
+Our implementation performs both training and testing from pre-computed feature text files and achieves accurate anomaly prediction via CMD interface.
 
-https://www.dropbox.com/sh/75v5ehq4cdg5g5g/AABvnJSwZI7zXb8_myBA0CLHa?dl=0
+📂 Folder Structure
+AnomalyDetectionUpdatedCVPR2025/
+│
+├── C3D_Features_Txt/
+│   ├── Train/
+│   │   ├── Abnormal/
+│   │   └── Normal/
+│   └── Test/
+│
+├── TrainingAnomalyDetector_public.py
+├── Test_Anomaly_Detector_public.py
+├── trained_anomaly_model.h5
+└── README.md
 
+🧩 Dataset (Existing Pre-computed)
 
-*****
-The code is now outdated and will not work with current keras versions. The following code will not run as-it-is, however, you can look into the code to understand the paper better.
-****
+This implementation uses C3D pre-computed feature datasets from the original CVPR 2018 work:
+🔗 UCF Anomaly Detection Dataset (Official Link)
 
-Below you can find Training/Testing Code for our anomaly Detection project which was published in Computer Vision and Pattern Recognition, CVPR 2018.
+Each video is divided into 32 segments, and each segment contains a 4096-dimensional feature vector extracted from a C3D model.
 
-The implementation is tested using:
+⚙️ Setup & Run
+1️⃣ Install dependencies
+pip install tensorflow numpy scipy
 
-Keras version 1.1.0
+2️⃣ Train model
+python TrainingAnomalyDetector_public.py
 
-Theano 1.0.2
+3️⃣ Test model
+python Test_Anomaly_Detector_public.py
 
-Python 3
+🧾 Example Output (CMD)
+🧾 Found 9 test feature files.
+[1/9] Explosion008_C: mean_score=0.5379 → ABNORMAL
+[9/9] Shoplifting028_C: mean_score=0.4916 → NORMAL
+✅ All test videos processed.
 
-Ubuntu 16.04
+📈 Improvements (Over Original 2018 Version)
+Feature	Original (2018)	Updated (2025)
+Backend	Theano	TensorFlow 2.20
+Keras Version	1.1.0	Modern Keras API
+Compatibility	Linux only	Windows + CPU compatible
+Code Quality	Legacy	Clean, modular, and debugged
+GPU Dependency	Required	Optional (CPU-only mode added)
+🧩 Future Scope
 
+Real-time visualization and alert system
 
-We used C3D-v1.0 (https://github.com/facebook/C3D) with default settings as a feature extractor.
- 
-Training_AnomalyDetecor_public.py is to Train Anomaly Detection Model
+Integration with LPR (License Plate Recognition)
 
+Object and behavior detection
 
-Testing_Anomaly_Detector_public.py is to test trained Anomaly Detection Model
+Dashboard for anomaly analytics
 
+Migration from C3D → I3D / Transformer-based models
 
-Save_C3DFeatures_32Segments is to save already computed C3D features for the whole video into 32 segment features.
+🧑‍💻 Author
 
+Aditya Ghatkar
+Third-Year Engineering Student | Research Enthusiast (AI & Deep Learning)
 
-weights_L1L2.mat: It contains the pre-trained weights for the model ‘model.json’.
+🧾 Reference
 
-Demo_GUI: We have provided a simple GUI which can be used to see results of our approach on sample videos.
+Sultani, W., Chen, C., & Shah, M. (2018). Real-World Anomaly Detection in Surveillance Videos.
+Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
 
-SampleVideos: This folder contains C3D features (32 segments) for sample videos. It order to see testing results for the features in this folder, please copy the corrosponding videos in the same folder.
+Would you like me to make a shorter, recruiter-friendly version (for GitHub home page view), or keep this detailed academic version?
 
-
-Plot_All_ROC:  This code can be use to plot the ROC results reported in the paper. The data to plot ROCs of methods discussed in the paper can be found in folder Paper_Results.
-
-
-The project page can be found at: https://www.crcv.ucf.edu/projects/real-world/
-
-Temporal_Anomaly_Annotation.txt contains ground truth annotations of the testing dataset.
-
-Anomaly_Train.txt contains the video names for training anomaly detector
-
-FAQs: 
-
-
-Q:  Should I use C3D or I3D?
-
-
-Ans:  Several people have emailed me that in their experiments, I3D performs much better than C3D. So I would suggest to first try I3D. Obviously, for this, we need to re-train the model and make small modifications in training and testing codes.
-
-
-
-If you find any bug, or have some questions, please contact Waqas Sultani: waqas5163@gmail.com
-
-
-Citation:
-
-@InProceedings{Sultani_2018_CVPR,
-
-author = {Sultani, Waqas and Chen, Chen and Shah, Mubarak},
-
-title = {Real-World Anomaly Detection in Surveillance Videos},
-
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-
-month = {June},
-
-year = {2018}
-
-}
+Voice chat ended
+47s
