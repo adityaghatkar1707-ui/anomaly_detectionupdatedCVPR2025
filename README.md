@@ -52,6 +52,8 @@ Keras Version	1.1.0	Modern Keras API
 Compatibility	Linux only	Windows + CPU compatible
 Code Quality	Legacy	Clean, modular, and debugged
 GPU Dependency	Required	Optional (CPU-only mode added)
+
+
 🧩 Future Scope
 
 Real-time visualization and alert system
@@ -73,5 +75,6 @@ Third-Year Engineering Student | Research Enthusiast (AI & Deep Learning)
 
 Sultani, W., Chen, C., & Shah, M. (2018). Real-World Anomaly Detection in Surveillance Videos.
 Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+
 
 
