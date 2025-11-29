@@ -74,7 +74,4 @@ Third-Year Engineering Student | Research Enthusiast (AI & Deep Learning)
 Sultani, W., Chen, C., & Shah, M. (2018). Real-World Anomaly Detection in Surveillance Videos.
 Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
 
-Would you like me to make a shorter, recruiter-friendly version (for GitHub home page view), or keep this detailed academic version?
 
-Voice chat ended
-47s
