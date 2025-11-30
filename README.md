@@ -26,10 +26,10 @@ AnomalyDetectionUpdatedCVPR2025/
 
 This implementation uses C3D pre-computed feature datasets from the original CVPR 2018 work:
 🔗 UCF Anomaly Detection Dataset (Official Link)
-
 Each video is divided into 32 segments, and each segment contains a 4096-dimensional feature vector extracted from a C3D model.
 
 ⚙️ Setup & Run
+
 1️⃣ Install dependencies
 pip install tensorflow numpy scipy
 
@@ -87,8 +87,11 @@ Epoch 2/5
 Testing Output Example:
 -----------------------------------------------------------------------
 🧾 Found 9 test feature files.
+
 [1/9] Explosion008_C: mean_score=0.5379 → ABNORMAL
+
 [2/9] Explosion025_C: mean_score=0.3916 → NORMAL
+
 [9/9] Shoplifting028_C: mean_score=0.4916 → NORMAL
 ✅ All test videos processed.
 ⏱️ Total time: 0:00:01.669070
@@ -104,3 +107,4 @@ In Level 1 (POC) → you show:
 It works (CMD results)
 Accuracy or classification works
 Training + Testing are functional
+
